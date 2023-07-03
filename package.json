@@ -21,6 +21,10 @@
 			"@wordpress/stylelint-config/scss"
 		]
 	},
+	"lint-staged": {
+		"*.js": ["wp=scripts lint-js", "wp-scripts format"],
+		"*.scss": "npx stylelint --fix"
+	},
 	"dependencies": {
 		"@wordpress/block-editor": "^12.4.0",
 		"@wordpress/blocks": "^9.1.8",
