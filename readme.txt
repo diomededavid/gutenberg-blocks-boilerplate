@@ -1,55 +1,58 @@
-=== Boilerplate ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.1
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+# WordPress Bolierplate Block Plugin
 
-Example block scaffolded with Create Block tool.
+This repository contains a WordPress block plugin that was generated using WordPress CLI. The plugin includes additional tools for code quality and formatting, such as ESLint, Stylelint, Prettier, and Husky.
 
-== Description ==
+## Installation
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+To install the plugin, follow these steps:
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+1. Clone the repository to your local machine.
+2. Add to your WordPress plugin themes directory.
+3. Navigate to the plugin directory.
+4. Run `npm install` to install the required dependencies.
 
-== Installation ==
+## Development Scripts
 
-This section describes how to install the plugin and get it working.
+The following scripts are available in the `package.json` file:
 
-e.g.
+- `build`: Builds the plugin using `wp-scripts`.
+- `format`: Formats the code using `wp-scripts format` and `npx stylelint` with auto-fixing.
+- `lint:css`: Lints the CSS files using `wp-scripts lint-style`.
+- `lint:js`: Lints the JavaScript files using `wp-scripts lint-js`.
+- `packages-update`: Updates the packages using `wp-scripts packages-update`.
+- `plugin-zip`: Creates a zip file of the plugin using `wp-scripts plugin-zip`.
+- `start`: Starts the development server using `wp-scripts start`.
+- `prepare`: Installs the Husky pre-commit hook for code quality checks.
 
-1. Upload the plugin files to the `/wp-content/plugins/boilerplate` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+To run a script, use the following command:
 
+```
+npm run <script-name>
+```
 
-== Frequently Asked Questions ==
+For example, to build the plugin, run:
 
-= A question that someone might have =
+```
+npm run build
+```
 
-An answer to that question.
+## Contributing
 
-= What about foo bar? =
+If you would like to contribute to this project, please follow these guidelines:
 
-Answer to foo bar dilemma.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Submit a pull request to the main repository.
 
-== Screenshots ==
+Please ensure that your code adheres to the provided code quality standards and passes the linting checks before submitting a pull request.
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+## License
 
-== Changelog ==
+This project is licensed under the GNU General Public License (GPL). See the [LICENSE](LICENSE) file for details.
 
-= 0.1.0 =
-* Release
+## Acknowledgements
 
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+- This plugin was generated with WordPress CLI (WP-CLI).
+- ESLint, Stylelint, Prettier, and Husky were integrated for code quality and formatting.
